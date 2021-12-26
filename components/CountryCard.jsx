@@ -29,7 +29,10 @@ function CountryCard({ country }) {
             onClick={enterCountry}
         >
             {/* <Image src = {country.flags.svg}  /> */}
-            <img src = {country.flags.svg} className="h-[50%] w-full rounded-lg rounded-b-none" />
+            <div className="h-[50%]">
+                <img src = {country.flags.svg} className="h-full w-full object-cover rounded-lg rounded-b-none" />
+
+            </div>
             <div className="px-[20px] py-[10px] flex flex-col gap-[10px]">
                 <p className="text-[20px] truncate font-[800]">{country.name}</p>
                 <div>

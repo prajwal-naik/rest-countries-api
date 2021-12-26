@@ -71,7 +71,7 @@ function country({ countryDetails }) {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px] sm:gap-[100px] py-[80px]">
                     <div className="flex items-center justify-center rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                        <img src = {countryDetails.flags.svg} alt = "" className="rounded-lg"/>
+                        <img src = {countryDetails.flags.svg} alt = "" className="rounded-lg h-full w-full object-cover"/>
                     </div>
                     <div className="flex flex-col items-center justify-between py-[40px]">
                         <div className="flex flex-col gap-[40px] sm:gap-[10px] w-full">
