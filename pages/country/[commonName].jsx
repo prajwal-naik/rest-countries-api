@@ -75,7 +75,7 @@ function country({ countryDetails }) {
                     </div>
                     <div className="flex flex-col items-center justify-between py-[40px]">
                         <div className="flex flex-col gap-[40px] sm:gap-[10px] w-full">
-                            <p className="text-[24px] font-[800]">{countryDetails.name}</p>
+                            <p className="text-[28px] font-[800]">{countryDetails.name}</p>
                             <div className="flex flex-col gap-[40px] sm:flex-row items-start justify-between text-[14px]">
                                 <div className="flex flex-col gap-[10px]">
                                     <p className="font-[600]">Native Name: <span className="font-[300]">{countryDetails.nativeName}</span></p>
@@ -91,13 +91,13 @@ function country({ countryDetails }) {
                                 </div>
                             </div>
                             <div className="flex gap-[20px]">
-                                <p className="text-[20px] font-[800]">Border Countries: </p>
+                                <p className="text-[20px] font-[800] whitespace-nowrap">Border Countries: </p>
                                 <div className="flex gap-[10px] flex-wrap">
                                     {
                                         countryDetails?.borders?.map((border) => {
                                             return(
                                                 <Link key = {border} href = {`/country/${border.toLowerCase()}`}>
-                                                    <div className={`${themeStore === "dark"?"bg-[#2b3945] text-white":"bg-white"} px-[20px] py-[2px] rounded-md cursor-pointer`} ><p>{border}</p></div>
+                                                    <div className={`${themeStore === "dark"?"bg-[#2b3945] text-white":"bg-white"} px-[20px] py-[2px] rounded-md cursor-pointer shadow-lg`} ><p>{border}</p></div>
 
                                                 </Link>
                                             );
