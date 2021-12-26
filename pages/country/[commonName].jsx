@@ -20,7 +20,7 @@ import Link from "next/link"
 //   }
 
 function country({ countryDetails }) {
-    console.log(countryDetails)
+    // console.log(countryDetails)
 
     // const { query } = useRouter();
 
@@ -75,23 +75,23 @@ function country({ countryDetails }) {
                     </div>
                     <div className="flex flex-col items-center justify-between py-[40px]">
                         <div className="flex flex-col gap-[40px] sm:gap-[10px] w-full">
-                            <p className="text-[24px] font-[500]">{countryDetails.name}</p>
+                            <p className="text-[24px] font-[800]">{countryDetails.name}</p>
                             <div className="flex flex-col gap-[40px] sm:flex-row items-start justify-between text-[14px]">
                                 <div className="flex flex-col gap-[10px]">
-                                    <p><b>Native Name:</b> {countryDetails.nativeName}</p>
-                                    <p><b>Population:</b> {countryDetails.population}</p>
-                                    <p><b>Region:</b> {countryDetails.region}</p>
-                                    <p><b>Sub Region:</b> {countryDetails.subregion}</p>
-                                    <p><b>Capital:</b> {countryDetails.capital}</p>
+                                    <p className="font-[600]">Native Name: <span className="font-[300]">{countryDetails.nativeName}</span></p>
+                                    <p className="font-[600]">Population: <span className="font-[300]">{countryDetails.population}</span></p>
+                                    <p className="font-[600]">Region: <span className="font-[300]">{countryDetails.region}</span></p>
+                                    <p className="font-[600]">Sub Region: <span className="font-[300]">{countryDetails.subregion}</span></p>
+                                    <p className="font-[600]">Capital: <span className="font-[300]">{countryDetails.capital}</span></p>
                                 </div>
                                 <div className="flex flex-col gap-[10px]">
-                                    <p><b>Top Level Domain:</b> {countryDetails.topLevelDomain[0]}</p>
-                                    <p><b>Currencies:</b> {getLangArray(countryDetails.currencies)}</p>
-                                    <p><b>Languages:</b> {getLangArray(countryDetails.languages)}</p>
+                                    <p className="font-[600]">Top Level Domain: <span className="font-[300]">{countryDetails.topLevelDomain[0]}</span></p>
+                                    <p className="font-[600]">Currencies: <span className="font-[300]">{getLangArray(countryDetails.currencies)}</span></p>
+                                    <p className="font-[600]">Languages: <span className="font-[300]">{getLangArray(countryDetails.languages)}</span></p>
                                 </div>
                             </div>
                             <div className="flex gap-[20px]">
-                                <p className="font-[600]">Border Countries: </p>
+                                <p className="text-[20px] font-[800]">Border Countries: </p>
                                 <div className="flex gap-[10px] flex-wrap">
                                     {
                                         countryDetails?.borders?.map((border) => {

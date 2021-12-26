@@ -7,6 +7,7 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { theme } from '../recoil';
+import FadeIn from "react-fade-in"
 // import countriesState from '../recoil/store';
 // import { useRecoilValue, useSetRecoilState } from 'recoil';
 
@@ -76,9 +77,9 @@ export default function Home({ countries }) {
 			<Head>
 				<title>Geidentify</title>
 				<link rel="icon" href="/favicon.ico" />
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-				<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet" />
+				<link rel="preconnect" href="https://fonts.googleapis.com"/>
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+				<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
 			</Head>
 
 			<Header />
@@ -95,7 +96,7 @@ export default function Home({ countries }) {
 						{modalState?<BsChevronUp color="#888383" size={"15px"}  /> : <BsChevronDown color="#888383" size={"15px"} onClick={() => {setModalState(!modalState)}} />}
 					</div>
 					
-					
+					{/* <FadeIn> */}
 					<div className= {`${!modalState?"hidden":"block"} ${themeStore === "dark"?"bg-[#2b3945] text-white":"bg-white"} absolute top-[100%] bg-white ml-[-20px] p-[10px] mt-[5px] rounded-md shadow-lg w-full`}>
 						<p onClick = {() => {setRegion("All Regions")}}>All Regions</p>
 						
@@ -105,6 +106,7 @@ export default function Home({ countries }) {
 						<p onClick = {() => {setRegion("Europe")}}>Europe</p>
 						<p onClick = {() => {setRegion("Oceania")}}>Oceania</p>
 					</div>
+					{/* </FadeIn> */}
 				</div>
 			</div>
 			
