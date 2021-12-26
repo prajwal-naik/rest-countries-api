@@ -91,10 +91,10 @@ function country({ countryDetails }) {
                                 </div>
                             </div>
                             <div className="flex gap-[20px]">
-                                <p>Border Countries: </p>
+                                <p className="font-[600]">Border Countries: </p>
                                 <div className="flex gap-[10px] flex-wrap">
                                     {
-                                        countryDetails.borders.map((border) => {
+                                        countryDetails?.borders?.map((border) => {
                                             return(
                                                 <Link key = {border} href = {`/country/${border.toLowerCase()}`}>
                                                     <div className={`${themeStore === "dark"?"bg-[#2b3945] text-white":"bg-white"} px-[20px] py-[2px] rounded-md cursor-pointer`} ><p>{border}</p></div>
